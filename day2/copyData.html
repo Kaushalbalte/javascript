@@ -1,0 +1,18 @@
+<html>
+    <body>
+   <label> Name1 </label> 
+   <input type="text" id="name1" ></input></br>
+   <label>Name2</label>
+   <input type="text" id="name2" ></input> <br>
+   <button type="submit" onclick="copyData()">copyData </button>
+
+   <script>
+       function copyData()
+        {
+                var n1 = document.getElementById("name1");
+                var n2 = document.getElementById("name2");
+                n2.value = n1.value;
+            }
+   </script>
+</body>
+   </html>

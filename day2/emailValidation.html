@@ -1,0 +1,22 @@
+<html>
+<body>
+
+<h2>email validation</h2>
+
+Email is: <p id="org"></p>
+
+<p id="mtch"></p>
+
+<script>
+var str = "kaushalbalte@gmail.com";
+var pos = str.indexOf("@");
+
+document.getElementById("org").innerHTML = str;
+ if(pos>0)
+ {
+ 	document.getElementById("mtch").innerHTML = " @ is present at "+pos+" position";
+ }
+</script>
+
+</body>
+</html>
