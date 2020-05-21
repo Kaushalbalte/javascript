@@ -1,0 +1,27 @@
+<html>
+    <body>
+        <p> welcome to the login page</p>
+        
+            
+        <input type="text" placeholder="Email id" id="mob"></input>
+        <label style="color: red; visibility: hidden;" id="lbl1">invalid entery</label><br><br>
+       <button type="submit" onclick="exp()">submit</button>
+   
+        <script>
+           function exp(){
+            var mob = document.getElementById("mob").value;
+            var exp =/^([a-z0-9\.-]+)@([a-z0-9-]+)([\.a-z]{2,8})([\.a-z]{2,8})?$/;
+            if(exp.test(mob)){
+                document.getElementById("lbl1").innerHTML="valid entry";
+                document.getElementById("lbl1").style.visibility="visible";
+                document.getElementById("mob").style.borderColor="green";
+            }
+            else{
+                document.getElementById("lbl1").innerHTML="Invalid entry";
+                document.getElementById("lbl1").style.visibility="visible";
+                document.getElementById("mob").style.borderColor="red";
+            }
+                   }
+        </script>
+    </body>
+</html>
