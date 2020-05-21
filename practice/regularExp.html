@@ -1,0 +1,26 @@
+<html>
+    <body>
+        <p> welcome to the login page</p>
+        
+            
+        <input type="text" placeholder="username" id="user"></input>
+        <label style="color: red; visibility: hidden;" id="lbl1">invalid entery</label><br><br>
+       <button type="submit" onclick="exp()">submit</button>
+   
+        <script>
+           function exp(){
+               var uname= document.getElementById("user").value;
+               var exp=/[a-z 0-9]@[a-z].com/i;
+               if(exp.test(uname)){
+                   alert("matched");
+               }
+               else{
+                   
+                   //alert("not matched");
+                   document.getElementById("user").style.borderColor="red";
+                   document.getElementById("lbl1").style.visibility="visible";
+               }
+           }
+        </script>
+    </body>
+</html>

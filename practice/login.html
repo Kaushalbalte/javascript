@@ -1,0 +1,37 @@
+<html>
+    <body>
+        <p> welcome to the login page</p>
+        <form onsubmit=" return login()" action="select.html">
+            
+        <input type="text" placeholder="username" id="user"></input>
+        <label style="color: red; visibility: hidden;" id="lbl1">invalid entery</label><br><br>
+        <input type="password" placeholder="password" id="pwd"></input>
+        <label style="color: red;visibility: hidden;" id="lbl2">invalid entery</label><br><br>
+       <button type="submit">submit</button>
+    </form>
+        <script>
+            function login(){
+                var user= document.getElementById("user");
+                var pwd= document.getElementById("pwd");
+                if(user.value.trim()==""){
+                    alert("blank entery");
+                    document.getElementById("lbl1").style.visibility="visible";
+                    return false;
+                }
+                else if(pwd.value.trim()==""){
+                    alert("blank password");
+                    document.getElementById("lbl2").style.visibility="visible";
+                    return false;
+                }
+                else if(pwd.value.length<5){
+                    alert("password too small");
+                    document.getElementById("pwd").style.border="  red solid 5px "
+                    return false;
+                }
+                else{
+                    return true;
+                }
+            } 
+        </script>
+    </body>
+</html>

@@ -1,0 +1,27 @@
+<html>
+    <body>
+        <p> welcome to the login page</p>
+        
+            
+        <input type="text" placeholder="mobile number" id="mob"></input>
+        <label style="color: red; visibility: hidden;" id="lbl1">invalid entery</label><br><br>
+       <button type="submit" onclick="exp()">submit</button>
+   
+        <script>
+           function exp(){
+            var mob = document.getElementById("mob").value;
+            var exp =/^[5-9]\w{8}0$/;// /^[7-9]\d{9}$/;
+            if(exp.test(mob)){
+                document.getElementById("lbl1").innerHTML="valid entry";
+                document.getElementById("lbl1").style.visibility="visible";
+                document.getElementById("mob").style.borderColor="green";
+            }
+            else{
+                document.getElementById("lbl1").innerHTML="Invalid entry";
+                document.getElementById("lbl1").style.visibility="visible";
+                document.getElementById("mob").style.borderColor="red";
+            }
+                   }
+        </script>
+    </body>
+</html>
